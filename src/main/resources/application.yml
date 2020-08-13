@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:derby:memory:test-jpa;create=true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.DerbyTenSevenDialect
+      hibernate.search.autoregister_listeners: false
+hapi:
+  fhir:
+    version: r4
+    server:
+      path: /fhir/*
+logging:
+  level.root: info
+
